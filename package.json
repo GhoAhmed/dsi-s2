@@ -13,5 +13,8 @@
   "type": "commonjs",
   "devDependencies": {
     "nodemon": "^3.1.11"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.4"
   }
 }

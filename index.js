@@ -20,6 +20,8 @@ emitter.on("greet", (name) => {
 emitter.emit("greet", "Alice");
 */
 
+require("dotenv").config();
+
 const http = require("http");
 
 let resources = [
@@ -135,9 +137,11 @@ function getRequestBody(req) {
   });
 }
 
+PORT = process.env.PORT || 3000;
+
 // ==============================
 // START SERVER
 // ==============================
-server.listen(3000, () => {
-  console.log("Serveur lancé sur http://localhost:3000");
+server.listen(PORT, () => {
+  console.log(`Serveur lancé sur http://localhost:${PORT}`);
 });
